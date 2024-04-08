@@ -1,0 +1,284 @@
+:root {
+  --green: rgb(164, 199, 61);
+  --myFontFamily: 'Poppins', sans-serif;
+  --button: linear-gradient(158deg, #5541EC 0%, #3FDCFD 98%);
+  --text: rgb(85,65,236);
+  --menuText:linear-gradient(158deg, #5541EC 0%, #3FDCFD 98%);
+  --bg: rgb(255, 245, 245) linear-gradient(280deg, rgba(255, 245, 245, 1) 0%, rgba(169, 216, 232, 1) 99%);
+  --main-bg: linear-gradient(158deg, #d2e8ff 30%, white 70%);
+}
+
+/* ghostwhite 
+repeating-linear-gradient(45deg, black, transparent 100px);
+linear-gradient(45deg, black, transparent)
+*/
+.main-bg{
+  background: var(--main-bg);
+}
+
+.nav-color{
+  background: linear-gradient(158deg, white  5%, #d2e8ff 95%);
+}
+
+.close {
+  transition: all 0.5s;
+  width: 60px;
+}
+.open{
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.login-form{
+  position: absolute;
+  top: 10%;
+  width: 500px;
+}
+.owner-logo{
+  color: var(--green);
+}  
+.text-color{
+  color: var(--text);
+}
+.bgc-color{
+  background: var(--bg);
+}
+
+.bg-color{
+  background-color: var(--green);
+}
+.font{
+  font-family: var(--myFontFamily);
+}
+.btn-color{
+  background: var(--button);
+}
+
+.menu-text{
+  color: var(--menuText);
+}
+.tooltip .tooltipText{
+  visibility: hidden;
+}
+.tooltip:hover .tooltipText{
+  visibility: visible;
+}
+
+#file-input{
+  display: none;
+}
+
+
+.t-headings{
+  font-size: 16px;
+}
+
+
+/* padding */
+.p_five{
+  padding: 30px;
+}
+
+
+
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+  padding: 0;
+  margin-right: 1em;
+  border: none;
+}
+
+.dropdown summary {
+  list-style: none;
+  list-style-type: none;
+}
+
+.dropdown>summary::-webkit-details-marker {
+  display: no
+  ne;
+}
+
+.dropdown summary:focus {
+  outline: none;
+}
+
+.dropdown summary:focus a.button {
+  border: 2px solid white;
+}
+
+.dropdown summary:focus {
+  outline: none;
+}
+
+.dropdown .ul {
+  position: absolute;
+  width: 350px;
+  box-sizing: border-box;
+  z-index: 2;
+  right: -49%;
+  top: 39px;
+  background: white;
+  border-radius: 6px;
+  list-style: none;
+  /* border-radius: 10px; */
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, .2);
+
+}
+
+.dropdown .ul li {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown .ul li a:link,
+.dropdown ul li a:visited {
+  padding: 10px 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  color: black;
+  text-decoration: none;
+}
+
+/* .dropdown .ul li a:hover {
+  background-color: blue;
+  color: white;
+} */
+
+/* Dropdown triangle */
+.dropdown .ul::before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: -10px;
+  right: 5%;
+  margin-left: -10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent rgb(232, 235, 239) transparent;
+}
+
+
+/* Close the dropdown with outside clicks */
+.dropdown>summary::before {
+  display: none;
+}
+
+.dropdown[open]>summary::before {
+  content: ' ';
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+
+@media (max-width:684px) {
+  .dropdown .ul {
+    width: 14rem;
+    right: -24%;
+  }
+}
+
+/* Custome switch button  */
+
+.switch-btt{
+  background-color: #ece9e9;
+  outline: none;
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  text-align: center;
+  width: 46px;
+  height: 20px;
+}
+
+.toggle{
+  width: 50px;
+  height: 20px;
+  appearance: none; 
+}
+
+.slide{
+  width: 15px;
+  height: 15px;
+  margin-top: -23px;
+  margin-left: 3px;
+  border-radius: 20px;
+  background: #fff;
+  transition: .5s;
+  /* transform: scale(1.1); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.toggle:checked + .slide{
+  margin-left: 28px;
+  /* background-color: #39ac31; */
+}
+
+
+@media only screen and (max-width: 768px) {
+  .slide{
+    margin-top: -22px;
+  }
+  
+}
+
+.checked-y{
+  background: #2b8e24 !important;
+}
+.checked-n{
+  background-color: #ece9e9;
+}
+
+
+/* Top-to-Btm */
+
+.top-to-btm{
+  position: relative;
+}
+.icon-position{
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+.icon-style{
+  background: var(--button);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  color: #fff;
+  cursor: pointer;
+  animation: movebtn 3s ease-in-out infinite;
+  transition: all .5s ease-in-out;
+}
+.icon-style:hover{
+  animation: none;
+  background: #fff;
+  color: var(--text);
+  border: 2px solid var(--text);
+}
+@keyframes movebtn {
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(20px);
+  }
+  50%{
+    transform: translateY(0px);
+  }
+  75%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+

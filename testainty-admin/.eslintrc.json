@@ -1,0 +1,42 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:jest/recommended",
+      "react-app"
+    ],
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "sourceType": "module"
+    },
+    "plugins": ["react", "jest"],
+    "globals": {
+      "process": "readonly",
+      "React": "writable"
+    },
+    "overrides": [{
+      "files": ["**/*.js"],
+      "rules": {
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        "react/jsx-uses-vars": "error",
+        "no-unused-vars": "warn",
+        "no-alert": "warn",
+        "no-multi-spaces": "warn",
+        "quotes": ["error", "single"],
+        "eqeqeq": "error"
+      }
+    }]
+  
+  }
+  
